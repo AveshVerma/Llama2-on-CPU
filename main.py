@@ -6,7 +6,8 @@ from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.llms import CTransformers
 from src.helper import *
-
+import time
+start_time = time.time()
 #Load the PDF File
 loader=DirectoryLoader('data/',
                        glob="*.pdf",
@@ -47,3 +48,11 @@ user_input = "Tell me about Machine Learning System Design"
 
 result=chain({'query':user_input})
 print(f"Answer:{result['result']}")
+
+# Record the end time
+end_time = time.time()
+
+# Calculate the execution time
+execution_time = end_time - start_time
+
+print("Execution time:", execution_time, "seconds")
