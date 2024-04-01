@@ -28,7 +28,9 @@ MANIFEST
 
 #Model file
 model/*.bin
-
+research/Llama-2-7b-chat-finetuned
+research/results
+research/keys.py
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
